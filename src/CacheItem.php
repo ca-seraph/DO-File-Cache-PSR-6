@@ -46,7 +46,7 @@ class CacheItem implements CacheItemInterface
         return $this->value !== false;
     }
 
-    public function set($value): CacheItem
+    public function set($value): static
     {
         if ($this->isDeferred) {
             $this->deferredValue = $value;
@@ -57,7 +57,7 @@ class CacheItem implements CacheItemInterface
         return $this;
     }
 
-    public function prepareForSaveDeferred()
+    public function prepareForSaveDeferred(): static
     {
         $this->isDeferred = true;
         if ($this->deferredValue) {
