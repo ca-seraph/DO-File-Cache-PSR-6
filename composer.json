@@ -1,5 +1,5 @@
 {
-    "name": "divineomega/do-file-cache-psr-6",
+    "name": "seraph/do-file-cache-psr-6",
     "description": "PSR-6 adapter for DO File Cache",
     "type": "library",
     "authors": [
@@ -8,10 +8,13 @@
             "email": "jordan@hall05.co.uk"
         }
     ],
+    "replace": {
+		"divineomega/do-file-cache-psr-6": "<=2.0.1"
+	},
     "license": "LGPL-3.0-only",
     "require": {
         "divineomega/do-file-cache": "^2.0.0",
-        "psr/cache": "^1.0"
+        "psr/cache": "^1.0|^2.0|^3.0"
     },
     "require-dev": {
         "cache/integration-tests": "^0.16.0",
